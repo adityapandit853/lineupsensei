@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Timetable</title>
+    <link rel="stylesheet" href="CreateTimetable.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script languages="javascript" type="text/javascript" src="CreateTimetable.js"></script>
+</head>
+<header>
+    <div class="header-container1">
+        <img src="/public/images/Title.jpeg" alt="" id="Logo">
+    </div>
+    <div class="header-container2">
+        <button class="user-icon" id="profile-icon">Admin</button>
+    </div>
+</header>
+<body>
+    <main>
+        <h1>Timetable Creation of Staff</h1>
+        <div id="form">
+            <form id="timetableForm">
+                <h2 id="h1">Enter Staff Details</h2>
+                <div id="Who">
+                    <h3>Select Department and Odd or Even Sem</h3>
+                    <select id="department-dropdown">
+                        <option value="">--Select Department--</option>
+                        <option value="CO">CO</option>
+                        <option value="IF">IF</option>
+                        <option value="AN">AN</option>
+                    </select>
+                    <select id="sem-dropdown">
+                        <option value="">--Select Semester--</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </div>
+                <div id="main">
+                        <label>Enter Staff Id</label>
+                        <input type="text" class="staff-id">
+                        <br><br>
+                        <label>Enter Staff Name</label>
+                        <input type="text" class="staff-name">
+                        <br><br>
+                    <div class="repeat">
+                        <label>Select Class:</label>
+                        <select class="class-dropdown">
+                            <option value="">--Select Class/Standard--</option>
+                            <option value="1">1st</option>
+                            <option value="2">2nd</option>
+                            <option value="3">3rd</option>
+                        </select>
+                        <br><br>
+                        <label>Select Subject</label>
+                        <select class="subject-dropdown">
+                            <option value="">--Select Subject--</option>
+                        </select>
+                        <br><br>
+                    </div>
+                    <p id="Add"></p>
+                    <br><br>
+                    <input type="button" value="ADD +" id="add" class="btn">
+                    <input type="file" id="fileInput">
+                    <label for="fileInput" class="btn">Upload File</label>
+                </div>
+                <button id="submit">Submit</button>
+            </form>
+        </div>
+        <div id="assignmentsTable">
+            <h2>Staff Subject Assignments</h2>
+            <table id="assignments">
+                <thead>
+                    <tr>
+                        <th>Staff ID</th>
+                        <th>Staff Name</th>
+                        <th>Class</th>
+                        <th>Subject</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <button id="generateTimetable">Generate Timetable</button>
+        <div id="timetableDisplay">
+            <h2>Generated Timetable</h2>
+            <table id="finalTimetable">
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Tuesday</th>
+                        <th>Wednesday</th>
+                        <th>Thursday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
